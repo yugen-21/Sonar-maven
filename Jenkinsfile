@@ -26,7 +26,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonarqube') { // Ensure this matches your SonarQube configuration in Jenkins
+                withSonarQubeEnv('SonarQube') { // Ensure this matches your SonarQube configuration in Jenkins
                     bat """
                     mvn sonar:sonar ^
                       -Dsonar.projectKey=sonar-maven ^
